@@ -1,0 +1,93 @@
+
+
+.story
+    .text
+        font-size: 15px
+        line-height: 1.4
+
+    .photoWrapper
+        margin-top: 5%
+    .subtitle
+        margin-top: 5%
+    p
+        opacity: 0.69
+
+.story-1
+    .subtitle 
+        margin-top: 5px
+.story-2
+    .two-angles-border
+        border-top-right-radius: $baseRadius
+        border-bottom-right-radius: $baseRadius
+    .left-side
+        padding-left: 0
+.story-4
+    img 
+        margin-bottom: 3%
+
+// Reverse setup
+.story.reverse
+    flex-direction: column-reverse !important
+    .container 
+        flex-direction: row-reverse
+.story-1.reverse
+    .text
+        margin-top: 3%
+.story-4.reverse 
+    .text
+        margin-bottom: 5%
+.story-5.reverse
+    .text
+        padding: 50px
+
+.story-7
+    .bigBlock
+        .subtitle
+            font-size: 58px
+            font-weight: 300
+    .smallBlock
+        .subtitle
+            font-size: 36px
+    .story-container
+        flex-direction: row
+        &.reverse
+            flex-direction: row-reverse !important
+.story-8
+    background-color: $gold
+    .subtitle
+        font-size: 58px
+        font-weight: 300
+    .text
+        font-size: 18px
+        color: black !important
+
+
+// Mobile styles
+@media (max-width: 800px)
+    .story-2
+        .left-side 
+            padding-right: 0
+            img
+                border-radius: 0 !important
+        p 
+            padding: 0 !important
+    .story-5
+        .container
+            flex-direction: column-reverse
+        &.reverse
+            .text
+                padding: $basePadding 0px 
+
+    .story-8
+
+        .subtitle
+            font-size: 30px !important
+            font-weight: 300
+        .text
+            font-size: 15px !important
+
+
+    .story-7
+        .story-container
+            flex-direction: column
+    

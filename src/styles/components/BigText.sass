@@ -1,0 +1,58 @@
+.bigText-1
+    margin-top: 80px
+    p
+        font-size: $baseFontSize * $h1Resize * 1.2
+        line-height: 130%
+        max-width: 1200px
+        strong
+            font-weight: 500
+            position: relative
+            display: inline-flex
+            color: $White
+            padding: 0 20px
+            &::after
+                content: ''
+                display: block
+                position: absolute
+                left: 0px
+                top: 8%
+                height: 92%
+                width: 100%
+                background: $Main
+                z-index: -1
+                border-radius: 1000px
+.bigText
+    padding-top: 20px
+    padding-bottom: 20px
+    background-color: white
+    .container
+        height: 200px !important
+        & > div
+            height: 200px !important
+    .left, .right
+        height: fit-content !important
+    .town
+
+    a
+        &:hover
+            opacity: .69
+    h2
+        color: black
+        font-size: 58px !important
+    p, a
+        color: black !important
+        font-size: 58px !important
+        // color: $White
+
+
+@media (max-width: 800px)
+    .bigText-1
+        p
+            font-size: $baseFontSize * 1.8
+            strong
+                padding: 0 10px
+
+    .bigText
+
+        p, a
+            font-size: 30px !important

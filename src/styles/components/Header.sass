@@ -1,0 +1,148 @@
+/// HEADER
+
+.header
+    position: fixed
+    z-index: 997
+    background: rgba($color: $gray, $alpha: 0.8)
+    backdrop-filter: blur(13px)
+    top: -1px
+    padding: 13px 40px !important
+
+    a, p, h3  
+        color: $white 
+
+
+    .menu-items 
+        display: flex
+        margin: 0 2vw 
+        &:hover
+            a
+                opacity: .4
+            a:hover
+                opacity: 1
+        a  
+            margin: 0 15px 
+            font-size: 15px
+            overflow: hidden
+            opacity: 1
+            transition: all 0.2s cubic-bezier(0.7,0,0.745,0.715)
+
+        a::after 
+            content: ''
+            height: 1px
+            display: block
+            width: 0%
+            background: $white
+            transition: all 0.2s cubic-bezier(0.7,0,0.745,0.715)
+
+        a:hover::after 
+            margin-left: 0px
+            width: 100%
+            transition: all 0.2s cubic-bezier(0.7,0,0.745,0.715)
+
+        a:hover 
+            opacity: 1
+            transition: all 0.2s cubic-bezier(0.7,0,0.745,0.715)
+
+
+
+
+    .phone a 
+        border: 1px solid $white
+        padding: 8px 16px
+        border-radius: 1000px
+        transition: all 0.2s cubic-bezier(0.7,0,0.745,0.715) !important
+        font-size: 19px
+    
+    .phone a:hover 
+        color: $gray
+        background: $gold
+        border: 1px solid $gold
+    
+    .logo a img 
+        width: 130px !important
+        object-fit: contain
+        max-height: 63px !important
+    
+
+@media(max-width: 1000px)
+    .header 
+        transition: all 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+        height: 70px
+        overflow: hidden
+        z-index: 9999
+        padding: 10px 20px !important
+
+        .menu-icon 
+            width: 75px
+            height: 50px
+            top: 15px
+            cursor: pointer
+            div::after 
+                content: ''
+                height: 1px
+                background: $white
+                position: absolute
+                transition: all 0.2s cubic-bezier(0.7,0,0.745,0.715)
+            
+            .line-1::after 
+                top: 0px
+                width: 50px
+                margin-left: 19px
+                right: 0px
+                transition: all 0.2s cubic-bezier(0.7,0,0.745,0.715)
+            
+            .line-2::after 
+                top: 10px
+                width: 69px
+                right: 0px
+            
+        
+        .menu-items 
+            flex-direction: column
+            width: 100%
+            margin-top: 15px
+            a 
+                padding-bottom: 4vw !important
+                padding-top: 4vw !important
+                margin-left: 0px !important
+                width: fit-content
+                font-size: 8vw 
+                font-weight: 300
+            
+        .logo a img 
+            width: 100px  !important
+            object-fit: contain
+    
+    .header.opened 
+        height: 100vh
+        overflow: hidden
+        .menu-icon 
+            width: 50px
+            height: 50px
+            top: 25px
+            .line-1::after 
+                transform: translateY(0) rotate(45deg)
+                top: 0px
+                right: 0px
+                transition: all 0.2s cubic-bezier(0.7,0,0.745,0.715)
+            
+            .line-2::after 
+                transform: translateY(0) rotate(-45deg)
+                top: 0px
+                width: 50px
+                right: 0px
+                transition: all 0.2s cubic-bezier(0.7,0,0.745,0.715)
+            
+        
+.fixed_phone 
+    position: fixed
+    right: 20px
+    bottom: 20px
+    width: fit-content
+    z-index: 9999
+    a 
+        padding: 10px 20px
+        background: $gold
+        border-radius: 1000px
+        color: $gray

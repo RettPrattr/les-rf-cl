@@ -1,0 +1,285 @@
+$white: #ffffff
+$gold: #d6c19c
+$gray: #121210
+
+
+button 
+    box-shadow: none
+    border: 0
+    padding: 13px 25px
+    color: $gray
+
+
+
+span 
+    display: inline-block
+
+
+.btn, button 
+    border-radius: 1000px
+
+.btn a 
+    padding: 13px 25px
+    border-radius: 1000px
+    margin: 0
+
+.btn.stroke a 
+    border: 1px solid $white
+    &:hover 
+        background: $gold
+        border: 1px solid $gold
+        color: $gray
+    
+
+.btn.gold a 
+    border: 1px solid $gold
+    color: $gray
+    background: $gold
+    padding: 13px 25px
+    &:hover 
+        background: black
+        border: 1px solid $white
+        color: white
+    
+
+.btn.white a 
+    color: $gray
+    background: $white
+    padding: 13px 25px
+    &:hover 
+        background: $gray
+        color: $white
+    
+
+.btn.stroke_black a 
+    border: 1px solid $gray
+    &:hover 
+        background: $gray
+        border: 1px solid $gray
+        color: $white
+    
+
+
+.gold
+    background: $gold
+    a,h1,h2,h3,p
+        color: $gray
+
+.map 
+    height: fit-content
+    padding: 0 !important
+    *::-webkit-scrollbar
+        display: none
+    #Layer_2 
+        pointer-events: none
+    .overlay 
+        height: 20%
+        h2
+            color: #fff
+            text-shadow: 0px 10px 50px rgba(0, 0, 0, 1)
+    
+    .controls 
+        position: absolute
+        bottom: 20px
+        right: 20px
+        z-index: 999
+        flex-direction: column
+        div 
+            padding: 10px
+            background-color: #fff
+            border-radius: 200px
+            margin-bottom: 10px
+            cursor: pointer
+            h3 
+                color: $gray
+                text-align: center
+                width: 24px
+                height: 24px
+                line-height: 1
+                margin: 0
+            
+        
+        div.able 
+            h3 
+                color: $gold 
+            
+        
+    
+    .map_con 
+        //width: 100vw
+        overflow: hidden
+        transition: all 0.2s cubic-bezier(0.7,0,0.745,0.715) !important
+        overflow: scroll
+        min-width: 100%
+        z-index: 999
+    
+    svg 
+        overflow: visible
+        position: relative
+        //scale: 1
+        transform: rotate(-0deg)
+        fill-rule: evenodd 
+        clip-rule: evenodd 
+        opacity: 1 
+        display: inline-block
+        bottom: 0
+        left: 0
+        fill-rule: evenodd
+        clip-rule: evenodd
+        //top: -45vw
+        //left: -40vw
+        opacity: 1
+        //width: 100vw
+        transition: all 0.2s cubic-bezier(0.7,0,0.745,0.715) !important
+    
+
+    polygon, #Layer_1 path 
+        position: relative
+        stroke: $black
+        stroke-width: 2
+        opacity: 0.5
+        fill: rgba(78, 205, 74, 0.69)
+        transition: all 0.1s cubic-bezier(0.7,0,0.745,0.715) !important
+        transform: rotate(-0deg)            
+    
+    #Layer_2 path 
+        fill: #fff
+    
+
+
+    .numberOfHouse 
+        transform: translate(50%, 50%)
+        width: 10px
+        height: 10px
+        display: block
+    
+
+    // polygon::after 
+    //     content: ''
+    //     position: absolute
+    //     display: block
+    //     top: 0
+    //     left: 0
+    //     width: 10px
+    //     height: 10px
+    //     background-color: black
+    //     transform: translate(50%, 50%)
+    // 
+
+    #Layer_1 path:hover 
+        opacity: 1
+        transition: all 0.1s cubic-bezier(0.7,0,0.745,0.715) !important
+    
+
+    #Layer_1 path.active 
+        opacity: 1
+    
+    #Layer_1 path.unavailable 
+        fill: rgba(235, 73, 73, 0.69) !important
+    
+    #Layer_1 path.booked 
+        fill: rgba(235, 173, 73, 0.69) !important
+    
+
+
+
+    .info 
+        // gap: 20px
+        padding: 20px 30px
+        right: 20px
+        flex-direction: row
+        justify-content: space-between
+        z-index: 998
+        box-shadow: 0 13px 30px rgba(0,0,0,0.3)
+        width: 100%
+        align-items: center
+        flex-wrap: wrap
+        transition: all 0.2s cubic-bezier(0.7,0,0.745,0.715) !important
+        div 
+            align-items: center
+        
+        .btn 
+            width: fit-content
+            margin-right: 20px
+        
+        h3 
+            margin-right: 10px
+            margin-bottom: 0px
+        
+        .status 
+            padding: 10px 25px
+            border-radius: 100px
+            svg 
+                padding-right: 10px
+                left: 0px
+            
+            p  
+                margin: 0
+                font-weight: 400
+             
+        
+        .allowed 
+            background: $gold
+            svg:nth-child(1) 
+                display: none
+            
+            svg:nth-child(2) 
+                display: block
+            
+        
+        .disallowed 
+            p  
+                color: $white !important 
+                background: $gray
+            svg:nth-child(2) 
+                display: none
+            
+            svg:nth-child(1) 
+                display: block
+                fill: $white
+            
+        
+    
+   
+@media (max-width: 800px)
+    .map 
+        height: fit-content
+        padding: 0 !important
+        justify-content: flex-start
+        align-items: flex-start
+        .buttons
+            gap: 20px
+        .controls 
+            bottom: 20px
+            right: 20px
+        
+        .map_con 
+            overflow: scroll
+            width: 100%
+        
+        svg 
+            overflow: visible
+            position: relative
+            fill-rule: evenodd 
+            clip-rule: evenodd 
+            opacity: 1 
+            display: inline-block
+            fill-rule: evenodd
+            clip-rule: evenodd
+            opacity: 1
+            width: 150vh !important
+        
+        .info 
+            padding: 20px
+            .number 
+                width: 100%
+                justify-content: space-between
+            
+            .status, .btn a 
+                padding: 10px 18px
+            
+            .btn 
+                margin-top: 13px
+            
+        
+    
